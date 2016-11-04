@@ -1,0 +1,6 @@
+[package]
+name = "scratch"
+version = "0.1.0"
+authors = ["Joe MacMahon <joe@macmahon.eu>"]
+
+[dependencies]
