@@ -1,13 +1,14 @@
 fn main() {
-    let v = vec![1, 2, 3];
-    let v2 = test(v);
-    println!("{:?}", v2);
-
-    println!("{:?}", v);
+    let mut x = 1;
+    let y = &mut x;
+    let z = &x;
+    println!("{:?}", y);
 }
 
-fn test(v: Vec<i32>) -> Vec<i32> {
-    let mut v2 = v;
-    v2.push(1);
-    v2
+fn test(x: &mut i32) -> i32 {
+    *x + 1
+}
+
+fn test2(x: &i32) -> () {
+
 }
