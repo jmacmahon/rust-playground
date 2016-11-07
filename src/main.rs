@@ -1,23 +1,13 @@
-use std::io;
-
 fn main() {
-    let mut v: Vec<i32> = vec![21, 34, 55, 89];
+    let v = vec![1, 2, 3];
+    let v2 = test(v);
+    println!("{:?}", v2);
 
-    loop {
-        println!("{:?}", v);
-        // let index = match read_and_parse() {
-        //     Ok(num) => num,
-        //     Err(_) => break,
-        // };
-        let index: i32 = read_and_parse().expect("uh oh");
-
-        v.push(index);
-    }
+    println!("{:?}", v);
 }
 
-fn read_and_parse<T>() -> Result<T, T::Err> where T: std::str::FromStr {
-    let mut buf = String::new();
-    io::stdin().read_line(&mut buf).expect("Failed to read line");
-
-    buf.trim().parse()
+fn test(v: Vec<i32>) -> Vec<i32> {
+    let mut v2 = v;
+    v2.push(1);
+    v2
 }
